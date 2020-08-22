@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     print()
     print(f'Deleted 5: {tree.delete(5)}')
+    print(f'Deleted 1: {tree.delete(1)}')
     print()
 
     print(f'In-order traversal: {tree.traverse_in_order(tree.root)}')
