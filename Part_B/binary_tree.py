@@ -34,10 +34,10 @@ class BinaryTree:
                 else:
                     current_pos = current_pos.right
             else:
-                # Trying to add a node with an existing value, ignore it
+                # Trying to add a node with an existing key, ignore it
                 return False
 
-    """ Search for a node with a given value -> O(logN) """
+    """ Search for a node with a given key -> O(logN) """
 
     def find(self, key: int) -> Union[Node, None]:
         current_pos = self.root
@@ -122,7 +122,7 @@ class BinaryTree:
         t = []
 
         if start_node:
-            t = self.traverse_in_order(start_node.left)
+            t += self.traverse_in_order(start_node.left)
             t.append(start_node.key)
             t += self.traverse_in_order(start_node.right)
 
