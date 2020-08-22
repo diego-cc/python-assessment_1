@@ -11,7 +11,7 @@ class Suit(IntEnum):
 
 class Card:
     def __init__(self, suit: Suit, rank: int):
-        if rank < 1 or rank > 13:
+        if rank < 2 or rank > 14:
             print('Invalid rank')
             return
         self.suit = suit
@@ -24,7 +24,7 @@ class Card:
             r = 'Q'
         elif self.rank == 13:
             r = 'K'
-        elif self.rank == 1:
+        elif self.rank == 14:
             r = 'A'
         else:
             r = self.rank

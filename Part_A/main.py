@@ -5,7 +5,7 @@ if __name__ == "__main__":
     deck = Deck.empty()
 
     # Add first card, ace of spades
-    deck.add_after(None, Card(Suit.SPADES, 1))
+    deck.add_after(None, Card(Suit.SPADES, 14))
 
     # Add J of Diamonds before the previous one
     # It becomes the head of the deck
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print(f'Found J of Diamonds? {j_of_diamonds}')
 
     # Uncomment the two lines below to get a full deck
-    # deck = deck.empty()
+    # deck = Deck.empty()
     # deck.fill()
 
     """ deck.add_after(None, Card(Suit.CLUBS, 4))
