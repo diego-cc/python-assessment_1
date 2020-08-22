@@ -171,18 +171,18 @@ class Deck:
     # Fills the deck with all 52 cards
     def fill(self):
         for name, member in Suit.__members__.items():
-            for r in range(2, 15):
+            for r in range(1, 14):
                 if self.is_empty():
                     # first card to be added
                     self.add_after(None, Card(member, r))
                 else:
-                    if r > 2:
+                    if r > 1:
                         # previous card was (member.value, r - 1)
                         self.add_after(Card(member, r - 1), Card(member, r))
                     else:
-                        # previous card was (member.value - 1, 14), unless member.value was 2 (first card)
+                        # previous card was (member.value - 1, 13), unless member.value was 2 (first card)
                         if member.value > 1:
-                            self.add_after(Card(Suit(member.value - 1), 14), Card(member, r))
+                            self.add_after(Card(Suit(member.value - 1), 13), Card(member, r))
 
     @staticmethod
     def empty():

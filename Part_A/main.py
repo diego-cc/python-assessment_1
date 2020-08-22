@@ -5,7 +5,7 @@ if __name__ == "__main__":
     deck = Deck.empty()
 
     # Add first card, ace of spades
-    deck.add_after(None, Card(Suit.SPADES, 14))
+    deck.add_after(None, Card(Suit.SPADES, 1))
 
     # Add J of Diamonds before the previous one
     # It becomes the head of the deck
